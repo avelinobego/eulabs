@@ -1,0 +1,14 @@
+Server:
+  Port: 9090
+  Debug: true
+  TimeZone: "America/Sao_Paulo"
+
+Database:
+  Host: 127.0.0.1
+  Port: 3306
+  Name: produtos
+  User: root
+  Password: admin
+
+Authentication:
+  Key: "@eulabs#"

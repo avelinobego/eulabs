@@ -1,0 +1,11 @@
+services:
+  mysql-memory:
+    container_name: mysql-memory
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=admin
+    volumes:
+      - ./init_database:/docker-entrypoint-initdb.d
+    ports:
+      - 3306:3306
+

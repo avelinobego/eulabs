@@ -1,0 +1,196 @@
+{
+	"info": {
+		"_postman_id": "5e41c4d3-ae2e-4d3f-8015-d600f7088960",
+		"name": "Eulabs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "8620417"
+	},
+	"item": [
+		{
+			"name": "token",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"login\": \"avelino.bego@gmail.com\",\n    \"password\": \"1234567890\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9090/api/v1/login"
+			},
+			"response": []
+		},
+		{
+			"name": "produtos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTYxNTk2NzksInN1YiI6ImF2ZWxpbm8uYmVnb0BnbWFpbC5jb20ifQ.xEqLDmkRy3PRkOpt_vcVRtCf_ctupcIOgYu0gXFv3d4"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"login\": \"avelino.bego@gmail.com\",\n    \"password\": \"1234567890\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9090/api/v1/produtos/all"
+			},
+			"response": []
+		},
+		{
+			"name": "produto by ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTYxNjI3NTYsInN1YiI6ImF2ZWxpbm8uYmVnb0BnbWFpbC5jb20ifQ.bET0IyDGavNo5c6TpQHftQUxxfr4zNkQyygzAQocjJo"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"login\": \"avelino.bego@gmail.com\",\n    \"password\": \"1234567890\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/v1/produtos/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"v1",
+						"produtos",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "30"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "produto insert",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTYxNTU1NDYsInN1YiI6ImF2ZWxpbm8uYmVnb0BnbWFpbC5jb20ifQ.ZmXTh_r8Z0u-3EDpDP1_u3fYn1srUnXXMfYi5hzFvvU"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"descricao\": \"{{$randomProductName}}\",\n    \"categoria\": 4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9090/api/v1/produtos/inserir"
+			},
+			"response": []
+		},
+		{
+			"name": "produto atualizar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTYxNTU1NDYsInN1YiI6ImF2ZWxpbm8uYmVnb0BnbWFpbC5jb20ifQ.ZmXTh_r8Z0u-3EDpDP1_u3fYn1srUnXXMfYi5hzFvvU"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 33,\n    \"descricao\": \"{{$randomProductName}}\",\n    \"categoria\": 4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9090/api/v1/produtos/atualizar"
+			},
+			"response": []
+		},
+		{
+			"name": "produto apagar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTYxNTY5MDIsInN1YiI6ImF2ZWxpbm8uYmVnb0BnbWFpbC5jb20ifQ.at06Q0wPQoP2ZINp-BEV9F7Pyqd5YRu9wnenecTb9VA"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 33,\n    \"descricao\": \"{{$randomProductName}}\",\n    \"categoria\": 4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/v1/produtos/delete/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"v1",
+						"produtos",
+						"delete",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "19"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
